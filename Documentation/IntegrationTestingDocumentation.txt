@@ -1,0 +1,26 @@
+The integration strategy and design test cases are for the BeHappy method in the BeHappy class. The BeHappy method takes a list of integers as input, where each integer denotes a feeling -1 (sad), 0 (neutral), or 1 (happy). The method modifies the input list so that each occurrence of a sad feeling (-1) is preceded by a happy feeling (1), and returns the modified list.
+
+Here are the detailed design test cases:
+
+Test Case 1: testBeHappyWithMultipleSadFeelings
+
+This test case examines a scenario where the input list contains only sad feelings (-1).
+The expected output is a list where each sad feeling (-1) is preceded by a happy feeling (1). This is in line with the requirements of the BeHappy method.
+This test case ensures that the method works as expected when all input feelings are sad.
+
+Test Case 2: testBeHappyWithNoSadFeelings
+This test case examines a scenario where the input list contains no sad feelings (-1), only neutral (0) and happy (1) feelings.
+The expected output is the same as the input list, since the method should not modify the list in this case.
+This test case ensures that the method does not modify the list when there are no sad feelings.
+
+Test Case 3: testBeHappyWithMixedFeelings
+This test case examines a scenario where the input list contains a mix of sad (-1), neutral (0), and happy (1) feelings.
+The expected output is a list where each sad feeling (-1) is preceded by a happy feeling (1), with the order of all other feelings maintained.
+This test case ensures that the method works as expected when the input list contains a mix of feelings.
+
+Integration Strategy:
+The BeHappy method is a standalone function and it does not seem to depend on other components or modules. Hence, the integration strategy primarily involves testing this method in isolation, which is also known as unit testing.
+
+In a broader context, if the BeHappy method is part of a larger system, the next step after unit testing would be integration testing. This would involve testing the method in combination with other methods and components it interacts with, to ensure they work correctly together.
+
+Finally, system testing would involve testing the entire system as a whole to ensure it meets the specified requirements. This would include testing the BeHappy method in the context of the system's end-to-end functionality.

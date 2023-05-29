@@ -9,13 +9,16 @@ public class BeHappy
     {
         // returns the index of the next sad value, or -1 if none exists
 
-        if (i < 0)
+        if (i < 0 || i >= feelings.size())
         {
             throw new Exception("Invalid parameter");
         }
 
         for (int index = i; index < feelings.size(); ++index)
         {
+            if (feelings.get(index) < -1 || feelings.get(index) > 1) {
+                throw new Exception("Invalid parameter");
+            }
             if (feelings.get(index) == -1)
             {
                 return index;
